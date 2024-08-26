@@ -1,39 +1,72 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+# Gazelle Static Hosting Plugin
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Welcome to the Gazelle Static Hosting Plugin! This open source project enables seamless static file hosting with the Gazelle framework. Whether you're building a blog, a portfolio, or a full-fledged web application, our plugin simplifies the process of serving static content.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Simple Integration**: Easily plug into any Gazelle application.
+- **Custom Configurations**: Host from the `web` directory on any port you choose.
+- **Automatic Link Generation**: Access your hosted files through generated URLs automatically.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To get started with the Gazelle Static Hosting Plugin, follow these steps:
 
-## Usage
+### Prerequisites
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Ensure you have Dart installed on your machine. If not, you can download it from [Dart's official site](https://dart.dev/get-dart).
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourgithub/gazelle_static_hosting_plugin.git
+   ```
+2. Navigate into the project directory and ensure your files are within the `web` directory:
+   ```bash
+   cd gazelle_static_hosting_plugin/web
+   ```
+3. Get the dependencies:
+   ```bash
+   dart pub get
+   ```
+
+### Usage
+
+To use the plugin in your Gazelle app, first import it into your Dart project:
 
 ```dart
-const like = 'sample';
+import 'package:gazelle_static_hosting_plugin/gazelle_static_hosting_plugin.dart';
 ```
 
-## Additional information
+Then, initialize and start your Gazelle application:
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+void main() async {
+  final app = GazelleApp(
+    plugins: [StaticHostingPlugin()],
+    port: 3001,
+  );
+
+  await app.start();
+  print("Static hosting plugin example started on port 3001");
+}
+```
+
+
+
+## Contributing
+
+Interested in contributing? Great! We welcome contributions from developers of all skill levels. Here's how you can contribute:
+
+- **Submit Issues**: Found a bug or have a feature request? Submit an issue.
+- **Send Pull Requests**: Have a fix or an improvement? Send us a pull request.
+
+Check out our [Contributing Guidelines](CONTRIBUTING.md) for more details on how to start contributing.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Thank you for exploring the Gazelle Static Hosting Plugin. Happy coding!
