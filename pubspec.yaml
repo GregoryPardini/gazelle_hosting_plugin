@@ -1,14 +1,17 @@
 name: gazelle_hosting_plugin
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+version: 1.0.1
+description: A simple plugin for hosting static files with the Gazelle framework.
+homepage: https://github.com/GregoryPardini/gazelle_hosting_plugin
+repository: https://github.com/GregoryPardini/gazelle_hosting_plugin
+issue_tracker: https://github.com/GregoryPardini/gazelle_hosting_plugin/issues
+
 
 environment:
-  sdk: ^3.5.0
+  sdk: '>=3.3.2 <4.0.0'
 
 # Add regular dependencies here.
 dependencies:
-  gazelle_core: ^0.4.0
+  gazelle_core: ^0.6.0
   http: ^1.2.2
   shelf: ^1.4.2
   shelf_static: ^1.1.2
@@ -20,3 +23,4 @@ dev_dependencies:
   test: ^1.16.0
   mockito: ^5.0.0
   build_runner: ^2.0.0
+
